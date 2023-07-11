@@ -1,5 +1,148 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-progressbar (2.5-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Sandro Tosi ]
+  * Use the new Debian Python Team contact name and address
+  * debian/copyright
+    - extend packaging copyright years
+  * debian/control
+    - bump Standards-Version to 4.6.1 (no changes needed)
+    - bump debhelper-compat to 13
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 04 Jun 2022 22:21:17 -0400
+
+python-progressbar (2.5-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.1.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938046
+  * debian/copyright
+    - extend packaging copyright years
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 19 Dec 2019 20:55:45 -0500
+
+python-progressbar (2.5-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Sandro Tosi ]
+  * New upstream release
+  * debian/patches
+    - drop patches, all merged upstream
+  * debian/control
+    - bump Standards-Version to 4.3.0 (no changes needed)
+  * debian/README.source
+    - remove, no longer up to date
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 25 Dec 2018 16:35:52 -0500
+
+python-progressbar (2.3-4) unstable; urgency=medium
+
+  * debian/control
+    - b-d on python-all and not only python; Closes: #822254
+    - bump Standards-Version to 3.9.8 (no changes needed)
+  * compat level 10
+  * debian/copyright
+    - extend packaging copyright years
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 08 Jan 2017 14:06:18 -0500
+
+python-progressbar (2.3-3) unstable; urgency=medium
+
+  [ Sandro Tosi ]
+  * debian/patches/0003-flush-upon-write.patch
+    - flush when writing output; Closes: #814098
+  * debian/control
+    - bump Standards-Version to 3.9.7 (no changes needed)
+    - update Homepage to point to GitHub
+  * debian/copyright
+    - extend packaging copyright years
+    - convert to DEP-5 format
+  * debian/watch
+    - switch to PyPI redirector
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 15 Apr 2016 21:57:48 +0100
+
+python-progressbar (2.3-2) unstable; urgency=medium
+
+  * debian/control
+    - switch me to Maintainer, team to Uploaders
+    - bump Standards-Version to 3.9.6 (no changes needed)
+  * debian/{control, compat}
+    - bump DH compat to 9
+  * Switch to dh_python2; Closes: #786176
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 07 Jun 2015 21:36:47 -0400
+
+python-progressbar (2.3-1) unstable; urgency=low
+
+  [ Sandro Tosi ]
+  * New upstream release
+  * debian/control
+    - updated Homepage field
+    - bump Standards-Version to 3.9.4 (no changes needed)
+    - add setuptools to b-d
+  * debian/rules
+    - converted to dh sequencer
+  * debian/patches/10_add_simpleprogress.patch
+    - removed, merged upstream
+  * debian/source/format
+    - use 3.0 (quilt) source format
+  * debian/{examples/*, rules}
+    - install upstream examples (now that are shipped in the tarball)
+  * debian/copyright
+    - extend packaging copyright years
+    - update package homepage
+  * debian/patches/10_python3.3_compat.patch
+    - fix Python 3.3 compatibility issues
+  * debian/{control, rules}
+    - provide py3k package; thanks to green for the report; Closes: #719849
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 24 Oct 2013 00:12:30 +0200
+
+python-progressbar (2.2-2) unstable; urgency=low
+
+  * debian/control
+    - switch Vcs-Browser field to viewsvn
+    - updated my email address
+    - removed DM-Upload-Allowed flag
+  * debian/README.source
+    - added to comply to Policy 3.8.0 (we use a patch system)
+  * debian/rules
+    - don't compress .py files (in doc dir)
+    - merged 'rm' call into 'dh_clean' one
+    - added $(CURDIR) to installation dir
+  * debian/copyright
+    - updated my email address
+    - fixed copyright notice and updated years for Debian packaging
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 30 Jan 2009 10:11:49 +0100
+
+python-progressbar (2.2-1) unstable; urgency=low
+
+  [ Sandro Tosi ]
+  * Initial release. (Closes: #495664)
+
+  [ Piotr Ożarowski ]
+  * DM-Upload-Allowed set to "yes"
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Wed, 20 Aug 2008 20:55:08 +0200
