@@ -1,15 +1,33 @@
-Source: template-repository
-Section: unknown
+Source: python-progressbar
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Sandro Tosi <morph@debian.org>
+Uploaders: Debian Python Team <team+python@tracker.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools
+Standards-Version: 4.6.1
+Homepage: https://github.com/niltonvolpato/python-progressbar
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-progressbar.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-progressbar
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-progressbar
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Description: text progress bar library for Python (Python 3)
+ A text progress bar is typically used to display the progress of a long
+ running operation, providing a visual cue that processing is underway.
+ .
+ The ProgressBar class manages the current progress, and the format of the line
+ is given by a number of widgets. A widget is an object that may display
+ differently depending on the state of the progress bar. There are three types
+ of widgets:
+   - a string, which always shows itself
+   - a ProgressBarWidget, which may return a different value every time its
+     update method is called
+   - a ProgressBarWidgetHFill, which is like ProgressBarWidget, except it
+     expands to fill the remaining width of the line.
+ .
+ This package contains the Python 3 version of progressbar.
